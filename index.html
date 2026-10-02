@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f5ef" />
+    <meta name="description" content="A little motion. A big difference. Explore the ITZFIZZ scroll-driven automotive experience and make your drive your own." />
+    <meta property="og:title" content="ITZFIZZ | Made to Move" />
+    <meta property="og:description" content="An independent exploration of design in motion. Three original vehicles. Four signature colors. You're in control." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preload" as="image" href="./assets/velocity-coupe.jpg" fetchpriority="high" />
+    <title>ITZFIZZ | Made to Move</title>
+    <script>
+      try {
+        var queryTheme = new URLSearchParams(location.search).get('theme');
+        var savedTheme = localStorage.getItem('itzfizz-theme');
+        var theme = queryTheme === 'night' || queryTheme === 'light' ? queryTheme : savedTheme;
+        document.documentElement.dataset.theme = theme === 'night' ? 'night' : 'light';
+        document.documentElement.style.colorScheme = theme === 'night' ? 'dark' : 'light';
+      } catch (_) {}
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <main style="font-family:Arial,sans-serif;background:#f5f5ef;color:#242720;min-height:100vh;padding-top:28px">
+        <header style="margin:0 5% 50px;font-size:30px;font-weight:700">itzfizz<span style="color:#89ad21">*</span></header>
+        <p style="margin:0 5% 30px">Made to move. Built to make an impact.</p>
+        <section style="background:#c2ed49;padding:36px 5%;overflow:hidden" aria-label="Welcome ITZFIZZ">
+          <p style="font-size:11px;letter-spacing:5px">WELCOME</p>
+          <h1 style="font-size:clamp(58px,14vw,180px);letter-spacing:-4px;margin:0">ITZFIZZ*</h1>
+          <img src="./assets/velocity-coupe.jpg" alt="Original orange sports coupe viewed from above" width="1568" height="1045" style="width:min(600px,100%);height:auto;mix-blend-mode:multiply;display:block;margin:0 0 0 auto" />
+        </section>
+        <div style="display:flex;flex-wrap:wrap;gap:24px;padding:36px 5%;font-size:13px">
+          <p><strong style="font-size:32px">58%</strong><br />Increase in pick up point use</p>
+          <p><strong style="font-size:32px">27%</strong><br />Increase in pick up point use</p>
+          <p><strong style="font-size:32px">23%</strong><br />Decreased in customer phone calls</p>
+          <p><strong style="font-size:32px">40%</strong><br />Decreased in customer phone calls</p>
+        </div>
+        <p style="padding:0 5% 32px;font-size:12px">An exploration of design in motion. Concept vehicles and illustrative reference metrics. Enable JavaScript for the interactive drive and configurator.</p>
+      </main>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
